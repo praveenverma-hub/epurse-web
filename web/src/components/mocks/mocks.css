@@ -1,0 +1,265 @@
+.mock {
+  padding: 18px 16px;
+  font-size: 13px;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Transaction list */
+.mock__parsed-badge {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--track-accent);
+  background: var(--track-accent-soft);
+  border-radius: 20px;
+  padding: 6px 10px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.mock__month {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 8px;
+}
+
+.mock__row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.mock__glyph {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--track-accent-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.mock__row-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.mock__row-name {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.mock__row-cat {
+  font-size: 11px;
+  color: var(--ink-soft);
+}
+
+.mock__row-amount {
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.mock__row-amount.is-credit {
+  color: #1a9e63;
+}
+
+.mock__row-amount.is-debit {
+  color: #d64550;
+}
+
+/* Goal card */
+.mock--goal {
+  background: linear-gradient(180deg, #121815 0%, #0b0f0d 100%);
+  color: var(--grow-ink);
+}
+
+.mock__goal-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.mock__goal-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: var(--grow-accent-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.mock__goal-name {
+  font-weight: 700;
+}
+
+.mock__goal-sub {
+  font-size: 11px;
+  color: var(--grow-ink-soft);
+}
+
+.mock__goal-figure {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--grow-accent);
+  font-family: var(--font-display);
+}
+
+.mock__goal-figure span {
+  font-size: 20px;
+}
+
+.mock__goal-figure-sub {
+  display: block;
+  font-size: 12px;
+  color: var(--grow-ink-soft);
+  font-family: var(--font-body);
+  margin-top: 2px;
+}
+
+.mock__goal-bar {
+  height: 8px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  margin: 16px 0 14px;
+  overflow: hidden;
+}
+
+.mock__goal-bar-fill {
+  height: 100%;
+  background: var(--grow-accent);
+  border-radius: 6px;
+}
+
+.mock__goal-ranges {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.mock__pill {
+  font-size: 10px;
+  padding: 5px 9px;
+  border-radius: 20px;
+  color: var(--grow-ink-soft);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.mock__pill.is-active {
+  color: #06231a;
+  background: var(--grow-accent);
+  font-weight: 700;
+}
+
+.mock__goal-ctas {
+  display: flex;
+  gap: 8px;
+}
+
+.mock__cta {
+  flex: 1;
+  border: none;
+  border-radius: 10px;
+  padding: 9px 0;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.mock__cta--ghost {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: var(--grow-ink);
+}
+
+.mock__cta--filled {
+  background: var(--grow-accent);
+  color: #06231a;
+}
+
+/* Group balance */
+.mock__group-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.mock__group-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: var(--share-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.mock__group-name {
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.mock__avatar-stack {
+  display: flex;
+}
+
+.mock__avatar {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid var(--surface);
+  margin-left: -8px;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mock__avatar:first-child {
+  margin-left: 0;
+}
+
+.mock__avatar--count {
+  background: var(--share-bg);
+  color: var(--ink-soft);
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.mock__group-balance {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: var(--font-display);
+  margin: 16px 0;
+}
+
+.mock__group-balance.is-owed {
+  color: var(--share-owed);
+}
+
+.mock__group-balance.is-owing {
+  color: var(--share-owe);
+}
+
+.mock__group-activity {
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  padding-top: 10px;
+}
+
+.mock__activity-row {
+  font-size: 12px;
+  color: var(--ink-soft);
+  padding: 6px 0;
+}

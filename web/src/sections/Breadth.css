@@ -1,0 +1,52 @@
+.breadth {
+  padding: 100px 0;
+  background: var(--surface);
+}
+
+.breadth__eyebrow {
+  color: var(--track-accent);
+  margin-bottom: 12px;
+}
+
+.breadth__grid {
+  margin-top: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.breadth__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.breadth__row--category {
+  padding-left: 40px;
+}
+
+.breadth__chip {
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.breadth__row--bank .breadth__chip {
+  background: var(--track-accent-soft);
+  color: var(--track-accent);
+}
+
+.breadth__row--category .breadth__chip {
+  /* These are category LABELS, not owe/owed data — must not borrow the
+     debt-semantic red now that --share-owe means something specific. */
+  background: var(--brand-soft);
+  color: var(--brand-dark);
+  border: 1px solid rgba(255, 90, 31, 0.18);
+}
+
+@media (max-width: 640px) {
+  .breadth__row--category {
+    padding-left: 0;
+  }
+}

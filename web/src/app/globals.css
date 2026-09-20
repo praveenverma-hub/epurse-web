@@ -1,0 +1,146 @@
+:root {
+  --ink: #14121a;
+  --ink-soft: #5a5568;
+  --surface: #ffffff;
+  --page-bg: #faf9fc;
+  --border: rgba(20, 18, 26, 0.1);
+
+  /* ePurse's actual brand color (app.json / constants/theme.js `primary`),
+     the one thing every zone below must read as a variation of — the site
+     had no reference to this at all before (nav mark was a blank white
+     square, hero was generic purple, CTA button was mint green). */
+  --brand: #ff5a1f;
+  --brand-dark: #c2410c;
+  --brand-soft: #ffe3d1;
+  --brand-glow: rgba(255, 90, 31, 0.45);
+
+  /* Track zone — PhonePe register (dense, light): brand orange, not violet */
+  --track-bg: #fff3ec;
+  --track-surface: #ffffff;
+  --track-accent: var(--brand);
+  --track-accent-soft: var(--brand-soft);
+  --track-ink: #2b1710;
+
+  /* Grow zone — Groww register (dark, calm): warm gold, not an unrelated
+     mint green — this is the one zone allowed to feel different (dark,
+     "serious money"), but the accent still has to read as ePurse's, not a
+     second brand. */
+  --grow-bg: #0f0a06;
+  --grow-surface: #1a120a;
+  --grow-accent: #ffb14e;
+  --grow-accent-soft: rgba(255, 177, 78, 0.16);
+  --grow-ink: #f7f1ea;
+  --grow-ink-soft: #b8ab9c;
+
+  /* Share zone — Splitwise register (light, social): brand orange for
+     identity, red/green stay reserved for the owe/owed DATA semantic
+     (matches the mobile app's own signed-balance convention — a data
+     color, not a brand color, so it does not get replaced with orange). */
+  --share-bg: #fbf7f0;
+  --share-surface: #ffffff;
+  --share-accent: var(--brand);
+  --share-owe: #d64545;
+  --share-owed: #1f9d55;
+  --share-ink: #1c1a16;
+
+  /* Privacy — original, no borrowed palette. Kept as-is; its gold accent
+     already reads as an ePurse warm tone, not a foreign one. */
+  --privacy-bg: #14121a;
+  --privacy-accent: #ffb14e;
+  --privacy-ink: #f4f2f8;
+
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+  --shadow-card: 0 20px 60px -20px rgba(20, 18, 26, 0.25);
+  --font-display: var(--font-display), Georgia, serif;
+  --font-body: var(--font-body), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* `overflow-x: hidden` here was silently breaking `position: sticky` for
+   every descendant on the page (Chrome treats html/body's overflow as
+   establishing its own scroll container, which position:sticky's
+   containing-block logic doesn't resolve against the viewport correctly)
+   — confirmed by measuring the hero's sticky element: its rect tracked
+   scrollY exactly (zero stickiness) with this rule in place. That broke
+   BOTH the hero's scroll-reveal AND the entire card-stacking section,
+   which the whole plan depends on `position: sticky` for. Do not
+   reintroduce overflow-x on html/body; if horizontal overflow ever
+   becomes a real problem, fix it on the specific offending element, not
+   the root. */
+html, body {
+  max-width: 100vw;
+}
+
+body {
+  margin: 0;
+  background: var(--page-bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  margin: 0;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.eyebrow {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.section-heading {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 600;
+}
+
+.section-sub {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  max-width: 560px;
+}
+
+@media (max-width: 720px) {
+  .container {
+    padding: 0 18px;
+  }
+}

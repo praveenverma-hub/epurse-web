@@ -1,0 +1,95 @@
+.module-grid {
+  padding: 100px 0;
+  background: var(--page-bg);
+}
+
+.module-grid__eyebrow {
+  color: var(--grow-accent);
+}
+
+.module-grid__grid {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.module-grid__tile {
+  position: relative;
+  border-radius: var(--radius-lg);
+  padding: 28px 24px 32px;
+  min-height: 220px;
+  overflow: hidden;
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* All three still tie back to --brand, at different depths — this is the
+   fix for tiles that were previously unrelated violet/mint/orange with no
+   shared identity. */
+.module-grid__tile--track {
+  background: linear-gradient(160deg, var(--brand), #a83b12);
+}
+
+.module-grid__tile--grow {
+  background: linear-gradient(160deg, #241505, #120a03);
+}
+
+.module-grid__tile--share {
+  background: linear-gradient(160deg, #e8622c, #8f3410);
+}
+
+/* Decorative rings echoing the hero's concentric backdrop, so the grid
+   reads as the same product rather than a disconnected section. Replaces
+   an empty rotated rectangle that had no content at all. */
+.module-grid__tile-rings {
+  position: absolute;
+  right: -30px;
+  bottom: -40px;
+  width: 160px;
+  height: 160px;
+}
+
+.module-grid__tile-rings span {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.module-grid__tile-rings span:last-child {
+  inset: 30px;
+  border-color: rgba(255, 255, 255, 0.24);
+}
+
+.module-grid__tile-body {
+  position: relative;
+  z-index: 2;
+}
+
+.module-grid__tile-name {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.module-grid__tile-blurb {
+  font-size: 14px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.82);
+  max-width: 220px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+@media (max-width: 900px) {
+  .module-grid__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .module-grid__grid {
+    grid-template-columns: 1fr;
+  }
+}

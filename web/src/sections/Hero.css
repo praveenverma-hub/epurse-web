@@ -1,0 +1,111 @@
+.hero {
+  height: 260vh;
+  position: relative;
+  /* Warm dark, not generic purple — this is the FIRST thing a visitor sees,
+     so it's the one place brand-color drift is most visible. */
+  background: radial-gradient(circle at 50% 30%, #2b160a 0%, #170d08 55%, #0c0704 100%);
+}
+
+.hero__sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 96px;
+  text-align: center;
+  overflow: hidden;
+  color: #fff;
+}
+
+.hero__eyebrow {
+  color: var(--brand);
+  margin-bottom: 14px;
+}
+
+.hero__headline {
+  font-size: clamp(32px, 6vw, 58px);
+  font-weight: 600;
+  max-width: 720px;
+}
+
+.hero__sub {
+  margin-top: 18px;
+  max-width: 460px;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.hero__rings {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hero__ring--1 {
+  width: 300px;
+  height: 300px;
+}
+
+.hero__ring--2 {
+  width: 460px;
+  height: 460px;
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+.hero__center {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero__mark-frame {
+  width: 64px;
+  height: 64px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  box-shadow: 0 0 60px var(--brand-glow);
+}
+
+.hero__center-label {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 0.04em;
+}
+
+.hero__node {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .hero__rings {
+    transform: scale(0.62);
+  }
+}

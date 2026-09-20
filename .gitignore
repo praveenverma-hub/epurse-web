@@ -5,3 +5,9 @@ dist/
 !.env.example
 .DS_Store
 *.log
+
+# Next.js (web/) — build output, never source
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts

@@ -1,0 +1,56 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 40;
+  padding: 18px 0;
+}
+
+.nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 17px;
+  text-decoration: none;
+}
+
+/* The real glyph keeps its own true brand colors always — it sits on a
+   small white chip so it stays crisp over the hero's dark start and every
+   light/dark stack card after it, rather than trying to invert with the
+   text below (which would distort the orange into something off-brand). */
+.nav__mark-chip {
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+}
+
+/* Only the TEXT needs to invert for legibility against both light and dark
+   sections — difference-blending white against light gives dark, against
+   dark gives light, and stays readable either way. */
+.nav__brand-text,
+.nav__cta {
+  color: #fff;
+  mix-blend-mode: difference;
+}
+
+.nav__cta {
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  padding: 8px 16px;
+}

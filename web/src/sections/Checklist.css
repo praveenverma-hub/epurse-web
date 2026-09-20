@@ -1,0 +1,36 @@
+.checklist {
+  padding: 100px 0;
+  background: var(--surface);
+}
+
+.checklist__eyebrow {
+  color: var(--share-owed);
+  margin-bottom: 12px;
+}
+
+.checklist__list {
+  margin: 40px 0 0;
+  padding: 0;
+  list-style: none;
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.checklist__item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 16px;
+  color: var(--ink);
+}
+
+.checklist__glyph {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  background: var(--share-owed);
+  flex-shrink: 0;
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
