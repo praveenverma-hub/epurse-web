@@ -19,6 +19,11 @@ export const metadata: Metadata = {
   title: "ePurse — financial clarity pays off.",
   description:
     "Financial clarity without giving away your financial data. Track spending, review transactions, plan budgets and manage private personal ledgers with ePurse.",
+  icons: {
+    icon: [{ url: "/epurse-icon.png", type: "image/png", sizes: "1024x1024" }],
+    shortcut: "/epurse-icon.png",
+    apple: [{ url: "/epurse-icon.png", sizes: "1024x1024", type: "image/png" }],
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

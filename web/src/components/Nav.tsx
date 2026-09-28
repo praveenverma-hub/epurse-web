@@ -8,7 +8,7 @@ export default function Nav() {
       <div className="container nav__inner">
         <Link href="/" className="nav__brand">
           <span className="nav__mark-chip">
-            <Mark size={20} />
+            <Mark size={32} />
           </span>
           <span className="nav__brand-text">ePurse</span>
         </Link>

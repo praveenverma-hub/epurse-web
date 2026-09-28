@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Mark from "./Mark";
 import "./Footer.css";
 
 const FOOTER_GROUPS = [
@@ -30,7 +31,8 @@ export default function Footer() {
       <div className="container footer__inner">
         <div className="footer__identity">
           <Link href="/" className="footer__brand" aria-label="ePurse home">
-            ePurse<span aria-hidden="true">.</span>
+            <Mark size={52} className="footer__brand-icon" />
+            <span>ePurse<i aria-hidden="true">.</i></span>
           </Link>
           <p className="footer__tagline">Financial clarity pays off.</p>
         </div>
