@@ -1,18 +1,13 @@
-"use client";
-
-import { useState } from "react";
 import SectionHeading from "./SectionHeading";
 import type { SectionProps } from "./types";
 
 export interface MarqueeItem { id: string; label: string; symbol: string }
 
 export default function FeatureMarquee({ rows, ...heading }: SectionProps & { rows: MarqueeItem[][] }) {
-  const [paused, setPaused] = useState(false);
   return (
-    <section id={heading.id} className="feature-section marquee" data-paused={paused} aria-labelledby={`${heading.id}-title`}>
+    <section id={heading.id} className="feature-section marquee" aria-labelledby={`${heading.id}-title`}>
       <div className="container">
         <SectionHeading {...heading} />
-        <button className="marquee__pause" type="button" aria-pressed={paused} onClick={() => setPaused(!paused)}>{paused ? "Resume motion" : "Pause motion"}<span aria-hidden="true">{paused ? " ▷" : " Ⅱ"}</span></button>
       </div>
       <div className="marquee__rows">
         {rows.map((row, index) => (

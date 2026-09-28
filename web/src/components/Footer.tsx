@@ -17,7 +17,7 @@ const FOOTER_GROUPS = [
     links: [
       { label: "Home", href: "/" },
       { label: "How it works", href: "/#walkthrough" },
-      { label: "Product tour", href: "/#demo" },
+      { label: "App screens", href: "/#screens" },
       { label: "Features", href: "/#features" },
       { label: "FAQ", href: "/#faq" },
       { label: "Contact us", href: "mailto:support@epurse.co.in" },

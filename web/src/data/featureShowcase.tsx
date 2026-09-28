@@ -7,9 +7,11 @@ import type { MarqueeItem } from "@/components/features/FeatureMarquee";
 export const appScreens = {
   accounts: { src: "/screens/accounts-sanitized.png", alt: "ePurse Accounts screen with a private net-worth summary and account list", width: 843, height: 1866, priority: true },
   accountDetail: { src: "/screens/account-detail-sanitized.png", alt: "ePurse credit-card details with utilization, payment dates and current bill cycle", width: 843, height: 1866 },
-  insights: { src: "/screens/insights-sanitized.png", alt: "ePurse Insights screen showing spend by account and a monthly spending pace chart", width: 843, height: 1866 },
+  home: { src: "/screens/home-overview.jpg", alt: "ePurse Home screen with monthly spending, income, lending and budget summary", width: 722, height: 1600 },
+  insights: { src: "/screens/insights-category-breakdown.jpg", alt: "ePurse Insights screen showing the monthly category breakdown and spending by account", width: 722, height: 1600 },
   budget: { src: "/screens/budget.png", alt: "ePurse monthly budget with remaining amount and category progress", width: 722, height: 1600 },
   budgetBreakdown: { src: "/screens/budget-breakdown.png", alt: "ePurse budget category detail with subcategory spending and month comparison", width: 722, height: 1600 },
+  lent: { src: "/screens/lent-sanitized.png", alt: "ePurse Lent screen with money to receive, a lending entry form and fictional demo contacts", width: 843, height: 1866 },
   borrow: { src: "/screens/borrow-sanitized.png", alt: "ePurse Borrowed screen with a repayment total, entry form and settled records", width: 843, height: 1866 },
   groups: { src: "/screens/group-sanitized.png", alt: "ePurse private group ledger with six-month spending and top categories", width: 843, height: 1866 },
   goals: { src: "/screens/goals-sanitized.png", alt: "ePurse Goals screen with progress for four savings goals", width: 843, height: 1866 },
@@ -17,10 +19,11 @@ export const appScreens = {
 } as const;
 
 export const carouselFeatures: FeatureItem[] = [
+  { id: "home", title: "Your month, at a glance.", description: "See spending, income, lending and budget progress together on your home screen.", tone: "lavender", visual: <AppPreview screenshot={appScreens.home} /> },
   { id: "spending", title: "Know where it goes.", description: "Bring transactions, accounts and spending into one clear picture.", tone: "lavender", visual: <AppPreview screenshot={appScreens.insights} /> },
   { id: "review", title: "Keep the details right.", description: "Review detected transactions and correct their categories.", tone: "cream", visual: <AppPreview screenshot={appScreens.review} /> },
   { id: "budgets", title: "Plan with perspective.", description: "Track category budgets and understand your spending patterns.", tone: "peach", visual: <AppPreview screenshot={appScreens.budget} /> },
-  { id: "lent", title: "Know who owes what.", description: "Keep lending, borrowing and repayments in a personal ledger.", tone: "mint", visual: <AppPreview screenshot={appScreens.borrow} /> },
+  { id: "lent", title: "Know who owes what.", description: "Keep lending, borrowing and repayments in a personal ledger.", tone: "mint", visual: <AppPreview screenshot={appScreens.lent} /> },
   { id: "groups", title: "Shared costs. Private records.", description: "Organize trips, home and family expenses in your own ledger.", tone: "lavender", visual: <AppPreview screenshot={appScreens.groups} /> },
   { id: "goals", title: "Give your goals a plan.", description: "See what you’ve saved and what’s left to reach your target.", tone: "cream", visual: <AppPreview screenshot={appScreens.goals} /> },
 ];
@@ -40,9 +43,9 @@ export const featureGroups: FeatureGroup[] = [
   { id: "plan", title: "Plan & maintain", items: ["Monthly & category budgets", "Goals & savings progress", "Bill & repayment reminders", "App Lock", "Optional encrypted Drive backup", "User-initiated backup & restore"] },
 ];
 export const marqueeRows: MarqueeItem[][] = [
-  [{ id: "budget", label: "Category budgets", symbol: "◔" }, { id: "travel", label: "Trip ledgers", symbol: "↗" }, { id: "bills", label: "Bill reminders", symbol: "▤" }, { id: "spending", label: "Spending insights", symbol: "▥" }],
-  [{ id: "groups", label: "Private groups", symbol: "◎" }, { id: "goals", label: "Savings goals", symbol: "⚑" }, { id: "review", label: "Review Queue", symbol: "✓" }, { id: "accounts", label: "Account overview", symbol: "▣" }],
-  [{ id: "categories", label: "Your categories", symbol: "✧" }, { id: "recaps", label: "Monthly recaps", symbol: "▦" }, { id: "lent", label: "Lent & Borrow", symbol: "⇄" }, { id: "backup", label: "Optional backup", symbol: "⌑" }],
+  [{ id: "review", label: "Smart transaction review", symbol: "✓" }, { id: "sms", label: "On-device SMS capture", symbol: "↯" }, { id: "manual", label: "Quick manual entry", symbol: "+" }, { id: "search", label: "Search & filters", symbol: "⌕" }, { id: "categories", label: "Custom categories", symbol: "✧" }, { id: "subcategories", label: "Detailed subcategories", symbol: "⌘" }],
+  [{ id: "budget", label: "Monthly budget plans", symbol: "◔" }, { id: "pace", label: "Daily spending pace", symbol: "↗" }, { id: "account-spend", label: "Spend by account", symbol: "▥" }, { id: "leaks", label: "Habit leak insights", symbol: "⌁" }, { id: "weekly", label: "Weekly recaps", symbol: "▦" }, { id: "monthly", label: "Monthly summaries", symbol: "▤" }],
+  [{ id: "groups", label: "Private group ledgers", symbol: "◎" }, { id: "lent", label: "Lent & Borrow history", symbol: "⇄" }, { id: "reminders", label: "Repayment reminders", symbol: "◷" }, { id: "credit", label: "Credit utilization", symbol: "▣" }, { id: "goals", label: "Savings goal progress", symbol: "⚑" }, { id: "backup", label: "Encrypted Drive backup", symbol: "⌑" }],
 ];
 export const stackFeatures: FeatureItem[] = [
   { id: "understand", title: "Understand the whole picture.", description: "See your spending across accounts and categories. Spot your biggest slice, compare income and expenses, and make sense of the month with recaps.", tone: "lavender", visual: <AppPreview screenshot={appScreens.insights} /> },

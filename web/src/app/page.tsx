@@ -11,6 +11,10 @@ import { appScreens, carouselFeatures, storyFeatures, screenshotFeatures, featur
 import "@/components/features/features.css";
 import "@/components/features/product.css";
 
+// Keep the interactive prototype available for a future web experience without
+// presenting it as a product that customers can use today.
+const SHOW_PRODUCT_DEMO = false;
+
 export default function Home() {
   return (
     <main id="main-content">
@@ -20,7 +24,7 @@ export default function Home() {
           <h1>Know your money.<br /><span>Keep it yours.</span></h1>
           <p className="product-hero__lead">Financial clarity without giving away your financial data.</p>
           <p className="product-hero__description">Track spending, review transactions, plan budgets and keep lending, borrowing and goals in view — with your financial ledger stored on your device.</p>
-          <div className="product-actions"><a className="showcase-button" href="#download">Get ePurse <span aria-hidden="true">↗</span></a><a className="product-secondary" href="#demo">Try the product tour <span aria-hidden="true">→</span></a></div>
+          <div className="product-actions"><a className="showcase-button" href="#download">Get ePurse <span aria-hidden="true">↗</span></a><a className="product-secondary" href="#explore">Explore the features <span aria-hidden="true">→</span></a></div>
           <p className="product-hero__note">Your own ledger. Private groups. Optional encrypted backup.</p>
         </div>
         <div className="product-hero__visual"><span className="product-hero__orbit" aria-hidden="true" /><AppPreview screenshot={appScreens.accounts} /><div className="product-hero__caption"><span aria-hidden="true">✓</span> A clearer picture starts with you.</div></div>
@@ -28,7 +32,7 @@ export default function Home() {
 
       <CardCarousel id="explore" eyebrow="A little more understanding" title="More than a record of what you spent." description="Know where it went. Keep the details accurate. Decide what comes next." items={carouselFeatures} />
       <StickyFeatureSection id="walkthrough" eyebrow="Capture → Review → Understand" title="Good decisions start with good records." description="A useful financial picture starts with the details you trust." imageSide="right" visual={<AppPreview screenshot={appScreens.review} />} items={storyFeatures} />
-      <ProductDemo />
+      {SHOW_PRODUCT_DEMO && <ProductDemo />}
       <ScreenshotGrid id="screens" eyebrow="Personal records, clearly explained" title="See the detail without losing the picture." description="Focused views for lending, private group costs and the categories behind each budget." items={screenshotFeatures} />
       <StackedFeatureCards id="journey" eyebrow="Understand → Plan → Act → Maintain" title="Turn clarity into your next step." items={stackFeatures} />
       <FeatureList id="features" eyebrow="The details that bring it together" title="One place for your financial picture." groups={featureGroups} />
@@ -44,7 +48,7 @@ export default function Home() {
         <p className="product-faq__contact">Still have a question? <a href="mailto:support@epurse.co.in">Talk to ePurse support ↗</a></p>
       </section>
 
-      <section id="download" className="product-download feature-section" aria-labelledby="download-title"><div className="container"><p className="eyebrow">Coming soon to Android</p><h2 id="download-title">Financial clarity pays off.</h2><p>We’re getting ePurse ready for its public release.<br />Explore the sample tour while the store listing is being prepared.</p><div className="product-actions"><a className="showcase-button" href="#demo">Explore the app <span aria-hidden="true">↗</span></a><a className="product-secondary" href="mailto:support@epurse.co.in">Contact us</a></div><span className="preview-note">Screens show the current Android app with fictional demo data.</span></div></section>
+      <section id="download" className="product-download feature-section" aria-labelledby="download-title"><div className="container"><p className="eyebrow">Coming soon to Android</p><h2 id="download-title">Financial clarity pays off.</h2><p>We’re getting ePurse ready for its public release.<br />See the current app screens while the store listing is being prepared.</p><div className="product-actions"><a className="showcase-button" href="#screens">Explore the app <span aria-hidden="true">↗</span></a><a className="product-secondary" href="mailto:support@epurse.co.in">Contact us</a></div><span className="preview-note">Screens show the current Android app with fictional demo data.</span></div></section>
     </main>
   );
 }
