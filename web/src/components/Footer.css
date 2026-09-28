@@ -31,13 +31,9 @@
   flex: 0 0 auto;
 }
 
-.footer__brand span {
-  display: inline-block;
-}
-
-.footer__brand i {
-  font-style: normal;
-  color: #b58cff;
+.footer__brand .wordmark__trademark {
+  margin-left: 0.18em;
+  font-size: 0.25em;
 }
 
 .footer__tagline {

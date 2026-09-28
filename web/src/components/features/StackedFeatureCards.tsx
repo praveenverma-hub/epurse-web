@@ -10,7 +10,7 @@ export default function StackedFeatureCards({ items, ...heading }: SectionProps 
         <div className="feature-stack__cards">
           {items.map((item, index) => (
             <article key={item.id} className={`feature-stack__card tone-${item.tone ?? "lavender"}`} style={{ "--card-index": index, zIndex: index + 1 } as CSSProperties}>
-              <header><span className="feature-index">0{index + 1}</span><h3>{item.title}</h3><span aria-hidden="true">↗</span></header>
+              <header><h3>{item.title}</h3></header>
               <div className="feature-stack__body"><p>{item.description}</p><div className="feature-stack__visual">{item.visual}</div></div>
             </article>
           ))}

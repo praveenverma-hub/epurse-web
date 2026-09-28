@@ -32,6 +32,20 @@ export default function TermsPage() {
         <li>You are responsible for keeping your device and any App Lock credentials secure.</li>
       </ul>
 
+      <h2>ePurse content and intellectual property</h2>
+      <p>
+        The ePurse™ name and logo are trademarks of ePurse. The interface designs,
+        illustrations, website copy and app screenshots are owned by ePurse or its
+        licensors. App screens shown on this
+        website contain fictional demonstration data and are provided only to explain
+        the product.
+      </p>
+      <p>
+        You may view the website for personal evaluation. You may not copy, republish,
+        sell, modify, remove ownership notices from, or use ePurse interface assets to
+        create or promote another product without prior written permission.
+      </p>
+
       <h2>No warranty</h2>
       <p>
         ePurse is provided &quot;as is&quot;, without warranty of any kind. We do not

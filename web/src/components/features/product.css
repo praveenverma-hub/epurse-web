@@ -26,7 +26,6 @@
 .product-demo__shell { border: 1px solid var(--border); border-radius: 26px; background: #fff; overflow: hidden; box-shadow: 0 24px 70px #321f700a; }
 .product-demo__top { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 25px 34px; }
 .product-demo__wordmark { font-size: 25px; font-weight: 750; letter-spacing: -.05em; }
-.product-demo__wordmark span { color: var(--brand); }
 .product-demo__sample { font-size: 11px; color: var(--ink-soft); }
 .product-demo__tabs { display: flex; gap: 10px; padding: 0 34px 20px; flex-wrap: wrap; border-bottom: 1px solid var(--border); }
 .product-demo__tabs button { cursor: pointer; border: 0; border-radius: 9px; padding: 13px 20px; background: #f5f2fd; color: var(--ink-soft); font-size: 13px; }
@@ -100,8 +99,7 @@
 .product-privacy p:not(.eyebrow) { color: var(--ink-soft); font-size: 14px; line-height: 1.8; margin-top: 24px; }
 .product-privacy .product-secondary { margin-top: 18px; }
 .product-privacy__points { display: grid; gap: 30px; }
-.product-privacy__points article { position: relative; padding-left: 40px; }
-.product-privacy__points article > span { position: absolute; top: 4px; left: 0; font-size: 10px; color: var(--brand); }
+.product-privacy__points article { position: relative; }
 .product-privacy__points h3 { font-size: 23px; font-weight: 500; }
 .product-privacy__points p:not(.eyebrow) { margin-top: 12px; }
 .product-privacy__points a { display: inline-block; margin-top: 15px; color: var(--brand); font-size: 12px; font-weight: 600; }

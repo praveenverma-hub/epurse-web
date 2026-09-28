@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { demo, spending, budgetUsed, netWorth, money } from "@/data/productDemo";
+import Wordmark from "@/components/Wordmark";
 
 export type PreviewScreen = "overview" | "review" | "budget" | "insights" | "lent" | "accounts" | "goals" | "groups";
 interface AppPreviewProps {
@@ -19,7 +20,7 @@ const previews: Record<PreviewScreen, PreviewContent> = {
   overview: {
     title: "Your financial snapshot", label: "Spent this month", amount: money(spending), detail: "September · monthly view",
     stats: [["Income", money(demo.income)], ["Budget left", money(demo.budget - spending)]], listTitle: "Recent transactions",
-    rows: demo.activity.map(row => ["↗", row.merchant, row.category, `−${money(row.amount)}`]),
+    rows: demo.activity.map(row => ["◆", row.merchant, row.category, `−${money(row.amount)}`]),
   },
   review: {
     title: "Review Queue", label: "Ready for your review", amount: "3 transactions", detail: "Check the category. Keep your records accurate.",
@@ -29,7 +30,7 @@ const previews: Record<PreviewScreen, PreviewContent> = {
   budget: {
     title: "Your monthly budget", label: "September spending", amount: `${budgetUsed}% used`, detail: `${money(spending)} of ${money(demo.budget)}`,
     stats: [["Remaining", money(demo.budget - spending)], ["Travel used", "90%"]], listTitle: "Category budgets",
-    rows: [["↗", "Travel & Cabs", "Near limit · ₹660 left", "90%"], ["◉", "Food & Dining", "₹1,520 remaining", "62%"], ["✧", "Shopping", "₹199 over budget", "125%"]],
+    rows: [["◔", "Travel & Cabs", "Near limit · ₹660 left", "90%"], ["◉", "Food & Dining", "₹1,520 remaining", "62%"], ["✧", "Shopping", "₹199 over budget", "125%"]],
   },
   insights: {
     title: "Understand your spending", label: "Your biggest slice", amount: "Travel & Cabs", detail: `${money(5840)} · 46% of this month's spending`,
@@ -49,23 +50,23 @@ const previews: Record<PreviewScreen, PreviewContent> = {
   goals: {
     title: "Goals & Savings", label: demo.goal.name, amount: money(demo.goal.saved), detail: `of ${money(demo.goal.target)} · 55% saved`,
     stats: [["Still to save", "₹68,000"], ["Target", "₹1,50,000"]], listTitle: "A plan for what matters",
-    rows: [["◎", "Emergency fund", "Your safety cushion", "55%"], ["↗", "Vacation", "Your next adventure", "₹31,000"], ["✧", "Education", "Invest in yourself", "₹12,500"]],
+    rows: [["◎", "Emergency fund", "Your safety cushion", "55%"], ["✦", "Vacation", "Your next adventure", "₹31,000"], ["✧", "Education", "Invest in yourself", "₹12,500"]],
   },
   groups: {
     title: "Private group ledgers", label: "Goa trip", amount: "₹18,700", detail: "Group spending · recorded by you",
     stats: [["Your share", "₹4,675"], ["You owe", "₹1,250"]], listTitle: "Your personal groups",
-    rows: [["↗", "Goa trip", "Your balance", "−₹1,250"], ["⌂", "Home", "Your balance", "Settled"], ["◎", "Family", "Your balance", "+₹850"]],
+    rows: [["◇", "Goa trip", "Your balance", "−₹1,250"], ["⌂", "Home", "Your balance", "Settled"], ["◎", "Family", "Your balance", "+₹850"]],
   },
 };
 
 /** Illustrative screens only; supply screenshot to render a sanitized app capture. */
 export default function AppPreview({ screen = "overview", screenshot }: AppPreviewProps) {
-  if (screenshot) return <figure className="app-preview app-preview--image"><Image {...screenshot} alt={screenshot.alt} sizes="(max-width: 720px) 80vw, 320px" /><figcaption>Current Android app · demo data</figcaption></figure>;
+  if (screenshot) return <figure className="app-preview app-preview--image"><Image {...screenshot} alt={screenshot.alt} draggable={false} sizes="(max-width: 720px) 80vw, 320px" /><span className="app-preview__watermark">© <Wordmark /></span><figcaption>Current Android app · demo data</figcaption></figure>;
   const content = previews[screen];
   return (
     <figure className={`app-preview app-preview--${screen}`} aria-label={`Illustrative ePurse ${screen} screen with sample data`}>
       <div className="app-preview__status" aria-hidden="true"><span>9:41</span><span>••• ▰</span></div>
-      <div className="app-preview__brand"><span>ePurse<span className="app-preview__dot">.</span></span><span className="app-preview__avatar">P</span></div>
+      <div className="app-preview__brand"><Wordmark trademark={false} /><span className="app-preview__avatar">P</span></div>
       <p className="app-preview__greeting">{content.title}</p>
       <div className="app-preview__balance">
         <span>{content.label}</span><strong>{content.amount}</strong><span>{content.detail}</span>

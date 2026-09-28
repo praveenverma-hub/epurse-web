@@ -11,7 +11,7 @@ export default function FeatureList({ groups, ...heading }: SectionProps & { gro
         {groups.map(group => (
           <div key={group.id}>
             <h3>{group.title}</h3>
-            <ul>{group.items.map(item => <li key={item}><span aria-hidden="true">↗</span>{item}</li>)}</ul>
+            <ul>{group.items.map(item => <li key={item}><span aria-hidden="true">✓</span>{item}</li>)}</ul>
           </div>
         ))}
       </div>

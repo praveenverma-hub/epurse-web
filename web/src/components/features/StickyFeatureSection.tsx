@@ -14,9 +14,8 @@ export default function StickyFeatureSection({ items, visual, imageSide = "right
         <div className="sticky-feature__layout">
           <div className="sticky-feature__visual">{visual}</div>
           <div className="sticky-feature__steps">
-            {items.map((item, index) => (
+            {items.map(item => (
               <article key={item.id} className="sticky-feature__step">
-                <span className="feature-index">0{index + 1}</span>
                 <h3>{item.title}</h3><p>{item.description}</p>
               </article>
             ))}

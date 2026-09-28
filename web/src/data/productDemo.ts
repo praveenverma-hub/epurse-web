@@ -8,7 +8,7 @@ export const demo = {
   borrowed: 850,
   goal: { name: "Emergency fund", saved: 82000, target: 150000 },
   categories: [
-    { name: "Travel & Cabs", amount: 5840, limit: 6500, symbol: "↗" },
+    { name: "Travel & Cabs", amount: 5840, limit: 6500, symbol: "✦" },
     { name: "Food & Dining", amount: 2480, limit: 4000, symbol: "◉" },
     { name: "Groceries", amount: 1299, limit: 1500, symbol: "⌂" },
     { name: "Bills & Utilities", amount: 1500, limit: 1200, symbol: "▤" },

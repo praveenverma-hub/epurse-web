@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState, type KeyboardEvent } from "react";
+import Wordmark from "@/components/Wordmark";
 import { demo as initialDemo, categoriesAfterReview, spending, budgetUsed, netWorth, money, budgetStatus } from "@/data/productDemo";
 
 const TABS = ["Home", "Review", "Budget", "Insights", "Lent", "Accounts"] as const;
@@ -38,7 +39,7 @@ export default function ProductDemo() {
     <section id="demo" className="feature-section product-demo container" aria-labelledby="demo-title">
       <div className="feature-heading"><p className="eyebrow">Take a look inside</p><h2 id="demo-title">Your money makes more sense<br />when you can see it.</h2><p className="feature-heading__description">Explore a sample month. Switch views, review a transaction and see how the pieces fit together.</p></div>
       <div className="product-demo__shell">
-        <div className="product-demo__top"><span className="product-demo__wordmark">ePurse<span>.</span></span><span className="product-demo__sample">Interactive tour · fictional data</span></div>
+        <div className="product-demo__top"><Wordmark className="product-demo__wordmark" /><span className="product-demo__sample">Interactive tour · fictional data</span></div>
         <div className="product-demo__tabs" role="tablist" aria-label="Explore the ePurse demo">
           {TABS.map((name, index) => <button type="button" role="tab" key={name} id={`demo-tab-${name}`} aria-controls="demo-panel" aria-selected={tab === name} tabIndex={tab === name ? 0 : -1} ref={element => { tabRefs.current[index] = element; }} onKeyDown={event => navigate(event, index)} onClick={() => setTab(name)}>{name}{name === "Review" && <span className="product-demo__count">{pending.length}</span>}</button>)}
         </div>

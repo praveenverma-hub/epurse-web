@@ -1,0 +1,23 @@
+.wordmark {
+  display: inline-flex;
+  align-items: flex-start;
+  line-height: 1;
+}
+
+.wordmark__name {
+  display: inline-block;
+}
+
+.wordmark__e {
+  display: inline-block;
+  transform: rotate(-13deg);
+  transform-origin: 55% 62%;
+}
+
+.wordmark__trademark {
+  margin: 0.08em 0 0 0.2em;
+  font-size: 0.34em;
+  font-weight: 650;
+  letter-spacing: 0;
+  line-height: 1;
+}

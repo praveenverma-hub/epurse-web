@@ -1,0 +1,5 @@
+Contact: mailto:support@epurse.co.in
+Expires: 2027-09-28T23:59:59Z
+Preferred-Languages: en
+Canonical: https://epurse.co.in/.well-known/security.txt
+Policy: https://epurse.co.in/security

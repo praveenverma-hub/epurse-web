@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Mark from "./Mark";
+import Wordmark from "./Wordmark";
 import "./Footer.css";
 
 const FOOTER_GROUPS = [
@@ -13,7 +14,7 @@ const FOOTER_GROUPS = [
     ],
   },
   {
-    title: "Explore ePurse",
+    title: "Explore the app",
     links: [
       { label: "Home", href: "/" },
       { label: "How it works", href: "/#walkthrough" },
@@ -31,8 +32,8 @@ export default function Footer() {
       <div className="container footer__inner">
         <div className="footer__identity">
           <Link href="/" className="footer__brand" aria-label="ePurse home">
-            <Mark size={52} className="footer__brand-icon" />
-            <span>ePurse<i aria-hidden="true">.</i></span>
+            <Mark size={52} variant="app" className="footer__brand-icon" />
+            <Wordmark />
           </Link>
           <p className="footer__tagline">Financial clarity pays off.</p>
         </div>
@@ -54,7 +55,7 @@ export default function Footer() {
 
         <div className="footer__details">
           <p>Financial clarity without giving away your financial data.<br className="footer__desktop-break" /> Your spending, plans and personal ledgers, together.</p>
-          <small>© {new Date().getFullYear()} ePurse. All rights reserved.</small>
+          <small>© {new Date().getFullYear()} <Wordmark />. All rights reserved.</small>
         </div>
       </div>
     </footer>

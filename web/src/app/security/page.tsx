@@ -27,6 +27,10 @@ export default function SecurityPage() {
       <p>Deleting your account clears local app data and disconnects Google access. Existing Drive backups remain until you delete them separately. Follow the <Link href="/delete-account">account and backup deletion steps</Link> for both locations.</p>
       <h2>A clear view of connected services</h2>
       <p>Local financial storage does not mean the app never connects to the internet. Google sign-in, optional Drive backup, remote app configuration and crash reporting serve separate purposes. Read the <Link href="/privacy">privacy information</Link> for these distinctions.</p>
+      <h2>Website security</h2>
+      <p>The ePurse website is designed to be delivered over HTTPS with browser policies that block framing, restrict scripts and external resources, and disable access to device capabilities the site does not need. Public product screens use fictional demonstration data and carry ePurse ownership notices.</p>
+      <h2>Report a security issue</h2>
+      <p>If you believe you found a security issue, do not include financial records, passwords, recovery keys or other sensitive data in your first message. Send a concise description to <a href="mailto:support@epurse.co.in">support@epurse.co.in</a> with “Security” in the subject.</p>
       <p>Need help? <a href="mailto:support@epurse.co.in">support@epurse.co.in</a></p>
     </main>
   );

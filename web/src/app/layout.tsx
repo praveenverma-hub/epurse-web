@@ -24,6 +24,16 @@ export const metadata: Metadata = {
     shortcut: "/epurse-icon.png",
     apple: [{ url: "/epurse-icon.png", sizes: "1024x1024", type: "image/png" }],
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: true,
+      "max-image-preview": "none",
+    },
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
