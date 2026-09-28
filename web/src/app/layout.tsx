@@ -16,15 +16,16 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
-  title: "ePurse — your bank SMS, turned into a budget",
+  title: "ePurse — financial clarity pays off.",
   description:
-    "ePurse reads your bank's transaction SMS on-device and turns it into accounts, budgets, goals and split expenses. Nothing ever leaves your phone.",
+    "Financial clarity without giving away your financial data. Track spending, review transactions, plan budgets and manage private personal ledgers with ePurse.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${inter.variable} ${fraunces.variable}`}>
       <body>
+        <a className="skip-link" href="#main-content">Skip to content</a>
         <Nav />
         {children}
         <Footer />

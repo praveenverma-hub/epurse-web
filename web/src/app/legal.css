@@ -29,6 +29,10 @@
   color: #3a3548;
 }
 
+.legal > .eyebrow { color: var(--brand); margin-bottom: 22px; font-size: 11px; }
+.legal > p + p { margin-top: 14px; }
+.legal ol { padding-left: 22px; }
+
 .legal ul {
   padding-left: 20px;
   margin-top: 8px;

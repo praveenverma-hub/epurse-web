@@ -1,60 +1,14 @@
+/* Shared brand tokens. Font variables are supplied by next/font in layout.tsx. */
 :root {
-  --ink: #14121a;
-  --ink-soft: #5a5568;
-  --surface: #ffffff;
+  --ink: #211a2d;
+  --ink-soft: #696273;
+  --surface: #fff;
   --page-bg: #faf9fc;
-  --border: rgba(20, 18, 26, 0.1);
-
-  /* ePurse's actual brand color (app.json / constants/theme.js `primary`),
-     the one thing every zone below must read as a variation of — the site
-     had no reference to this at all before (nav mark was a blank white
-     square, hero was generic purple, CTA button was mint green). */
-  --brand: #ff5a1f;
-  --brand-dark: #c2410c;
-  --brand-soft: #ffe3d1;
-  --brand-glow: rgba(255, 90, 31, 0.45);
-
-  /* Track zone — PhonePe register (dense, light): brand orange, not violet */
-  --track-bg: #fff3ec;
-  --track-surface: #ffffff;
+  --border: #ded8e5;
+  --brand: #5b3cc4;
+  --brand-dark: #321f70;
+  --brand-soft: #eee7fb;
   --track-accent: var(--brand);
-  --track-accent-soft: var(--brand-soft);
-  --track-ink: #2b1710;
-
-  /* Grow zone — Groww register (dark, calm): warm gold, not an unrelated
-     mint green — this is the one zone allowed to feel different (dark,
-     "serious money"), but the accent still has to read as ePurse's, not a
-     second brand. */
-  --grow-bg: #0f0a06;
-  --grow-surface: #1a120a;
-  --grow-accent: #ffb14e;
-  --grow-accent-soft: rgba(255, 177, 78, 0.16);
-  --grow-ink: #f7f1ea;
-  --grow-ink-soft: #b8ab9c;
-
-  /* Share zone — Splitwise register (light, social): brand orange for
-     identity, red/green stay reserved for the owe/owed DATA semantic
-     (matches the mobile app's own signed-balance convention — a data
-     color, not a brand color, so it does not get replaced with orange). */
-  --share-bg: #fbf7f0;
-  --share-surface: #ffffff;
-  --share-accent: var(--brand);
-  --share-owe: #d64545;
-  --share-owed: #1f9d55;
-  --share-ink: #1c1a16;
-
-  /* Privacy — original, no borrowed palette. Kept as-is; its gold accent
-     already reads as an ePurse warm tone, not a foreign one. */
-  --privacy-bg: #14121a;
-  --privacy-accent: #ffb14e;
-  --privacy-ink: #f4f2f8;
-
-  --radius-sm: 10px;
-  --radius-md: 18px;
-  --radius-lg: 28px;
-  --shadow-card: 0 20px 60px -20px rgba(20, 18, 26, 0.25);
-  --font-display: var(--font-display), Georgia, serif;
-  --font-body: var(--font-body), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 * {
@@ -84,12 +38,12 @@ body {
   margin: 0;
   background: var(--page-bg);
   color: var(--ink);
-  font-family: var(--font-body);
+  font-family: var(--font-body), Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4 {
-  font-family: var(--font-display);
+  font-family: var(--font-display), Georgia, serif;
   margin: 0;
   line-height: 1.05;
   letter-spacing: -0.01em;
@@ -144,3 +98,8 @@ img, svg {
     padding: 0 18px;
   }
 }
+
+:focus-visible { outline: 3px solid #7b4dff; outline-offset: 5px; }
+.skip-link { position: fixed; top: -80px; left: 20px; z-index: 100; padding: 12px 20px; background: white; color: #321f70; border-radius: 8px; }
+.skip-link:focus { top: 12px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

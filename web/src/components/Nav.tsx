@@ -12,7 +12,8 @@ export default function Nav() {
           </span>
           <span className="nav__brand-text">ePurse</span>
         </Link>
-        <a href="#download" className="nav__cta">Get notified</a>
+        <nav className="nav__links" aria-label="Main navigation"><Link href="/#demo">Product tour</Link><Link href="/#features">Features</Link><Link href="/privacy">Privacy</Link></nav>
+        <Link href="/#download" className="nav__cta">Get ePurse <span aria-hidden="true">↗</span></Link>
       </div>
     </header>
   );

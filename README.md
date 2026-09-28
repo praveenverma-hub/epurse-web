@@ -1,5 +1,7 @@
 # epurse-web
 
+**Component update (2026-09-27):** The homepage now demonstrates six reusable reference patterns: carousel cards, reversible sticky visual sections, screenshot grids, feature lists, opposing marquee rows, and heading-preserving stacking cards. The earlier homepage sections and local-only signup form were replaced. See [web/COMPONENTS.md](web/COMPONENTS.md) for implementation and integration details. Content and illustrated screens remain provisional pending the final app brief. The historical first-pass notes below describe the previous implementation.
+
 Marketing/landing site for ePurse — a separate repo from the mobile app
 (`praveenverma-hub/epurse`), by design (2026-09-20).
 

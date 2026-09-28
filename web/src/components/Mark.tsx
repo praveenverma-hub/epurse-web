@@ -1,9 +1,4 @@
-// The real ePurse glyph — same shape as the mobile app's assets/icon.svg,
-// simplified for reuse at nav/hero sizes. Previously every placeholder mark
-// on this site was a blank tinted square with no connection to the actual
-// brand; this is the fix. Keep this in sync if the mobile icon ever changes
-// (it lives in the OTHER repo now, praveenverma-hub/epurse, so it can't be
-// imported directly — see docs/WEBAPP_UI_INSPIRATION.md's note on the split).
+// ePurse purse glyph, using the violet website palette.
 interface MarkProps {
   size?: number;
   glow?: boolean;
@@ -17,17 +12,17 @@ export default function Mark({ size = 40, glow = false, className = "" }: MarkPr
       height={size}
       viewBox="0 0 1024 1024"
       className={className}
-      style={glow ? { filter: "drop-shadow(0 0 34px rgba(255, 90, 31, 0.55))" } : undefined}
+      style={glow ? { filter: "drop-shadow(0 0 34px rgba(91, 60, 196, 0.4))" } : undefined}
       aria-hidden
     >
       <defs>
         <linearGradient id="mark-bg" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#FF5A1F" />
-          <stop offset="100%" stopColor="#FC8019" />
+          <stop offset="0%" stopColor="#5B3CC4" />
+          <stop offset="100%" stopColor="#7B4DFF" />
         </linearGradient>
         <linearGradient id="mark-purse" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stopColor="#FFFFFF" />
-          <stop offset="100%" stopColor="#FFE3D1" />
+          <stop offset="100%" stopColor="#EEE7FB" />
         </linearGradient>
       </defs>
       <rect width="1024" height="1024" rx="220" fill="url(#mark-bg)" />
@@ -36,7 +31,7 @@ export default function Mark({ size = 40, glow = false, className = "" }: MarkPr
            Q800 800 720 800 L304 800 Q224 800 224 720 Z"
         fill="url(#mark-purse)"
       />
-      <rect x="450" y="270" width="124" height="60" rx="22" fill="#FF5A1F" />
+      <rect x="450" y="270" width="124" height="60" rx="22" fill="#5B3CC4" />
       <circle cx="512" cy="300" r="14" fill="#FFFFFF" />
       <text
         x="512"
@@ -45,7 +40,7 @@ export default function Mark({ size = 40, glow = false, className = "" }: MarkPr
         fontSize="380"
         fontWeight="900"
         textAnchor="middle"
-        fill="#FF5A1F"
+        fill="#5B3CC4"
         letterSpacing="-12"
       >
         e
