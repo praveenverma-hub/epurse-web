@@ -23,6 +23,13 @@
   margin-bottom: 12px;
 }
 
+.legal h3 {
+  font-size: 16px;
+  font-weight: 650;
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
 .legal p, .legal li {
   font-size: 15px;
   line-height: 1.7;
