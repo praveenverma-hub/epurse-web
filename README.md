@@ -28,6 +28,14 @@ backdrop, §9.8), bank/category breadth honeycomb (§9.9), module bento grid
 page's spine), the free-checklist (§9.6), and the "coming soon" email-capture
 CTA (§9.7/§11.4). Plus `/privacy`, `/terms`, `/delete-account` as real routes.
 
+**Shared-group invites (2026-10-15)** — mobile repo `docs/SHARED_GROUP_SYNC.md` §5:
+- `/join` (`web/src/app/join/`): where an invite link lands when Android didn't open the app.
+  The invite (incl. the group's KEY) is in the `#fragment`, which never reaches the server; the
+  page hands it to `epurse://join#…`. **Never add analytics or third-party scripts to it.**
+- `web/public/.well-known/assetlinks.json`: Android App Links verification. Lists the PUBLIC
+  React Native debug keystore for testing — **before launch, `com.epurse.app` must list only the
+  EAS upload key + Play app-signing SHA-256s.** Serve it as `application/json`, no redirect.
+
 **Known gaps, deliberately left open:**
 - Phone mockups use built-in HTML/CSS placeholders, not real sanitized
   device screenshots — doc §11.2 flags that as a separate asset-capture
